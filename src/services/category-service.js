@@ -1,4 +1,4 @@
-import { categoryModel, subCategoryModel } from "../db";
+import { categoryModel, subCategoryModel } from "../db/index.js";
 
 class CategoryService {
   constructor(categoryModel) {

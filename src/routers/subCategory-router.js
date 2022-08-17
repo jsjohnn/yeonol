@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import is from '@sindresorhus/is';
-import { adminRequired, errorHandler } from '../middlewares';
-import { subCategoryService } from '../services';
+import { adminRequired, errorHandler } from '../middlewares/index.js';
+import { subCategoryService } from '../services/index.js';
 
 const subCategoryRouter = Router();
 

@@ -1,7 +1,7 @@
 import { Router } from "express";
 import is from "@sindresorhus/is";
-import { loginRequired, errorHandler } from "../middlewares";
-import { userService } from "../services";
+import { loginRequired, errorHandler } from "../middlewares/index.js";
+import { userService } from "../services/index.js";
 import { body, validationResult } from "express-validator";
 
 const userRouter = Router();

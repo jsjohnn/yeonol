@@ -1,5 +1,5 @@
-import { Schema } from "mongoose";
-import mongoose from "mongoose";
+import pkg from 'mongoose';
+const { Schema } = pkg;
 // import autoIncrement from "mongoose-auto-increment";
 // autoIncrement.initialize(mongoose.connection);
 

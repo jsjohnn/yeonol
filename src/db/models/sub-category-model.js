@@ -1,5 +1,6 @@
-import { model } from "mongoose";
-import { SubCategorySchema } from "../schemas/sub-category-schema";
+import pkg from 'mongoose';
+const { model } = pkg;
+import { SubCategorySchema } from "../schemas/sub-category-schema.js";
 
 const SubCategory = model("subcategories", SubCategorySchema);
 

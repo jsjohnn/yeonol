@@ -1,7 +1,8 @@
 import cors from "cors";
 import express from "express";
-let http = require("http");
-let path = require("path");
+// let http = require("http");
+import path from 'path';
+const __dirname = path.resolve();
 
 import {
   viewsRouter,
@@ -10,9 +11,9 @@ import {
   categoryRouter,
   subCategoryRouter,
   orderRouter,
-} from "./routers";
+} from "./routers/index.js";
 
-import { errorHandler } from "./middlewares";
+import { errorHandler } from "./middlewares/index.js";
 
 const app = express();
 
@@ -36,7 +37,7 @@ app.use("/api", categoryRouter);
 app.use("/api", packageRouter);
 app.use("/api", subCategoryRouter);
 app.use("/api", orderRouter);
-let publicPath = path.resolve(__dirname, "image");
+// let publicPath = path.resolve(__dirname, "image");
 
 app.use("/", express.static("src"));
 

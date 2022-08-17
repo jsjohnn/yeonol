@@ -1,5 +1,6 @@
-import { model } from "mongoose";
-import { CategorySchema } from "../schemas/category-schema";
+import pkg from 'mongoose';
+const { model } = pkg;
+import { CategorySchema } from "../schemas/category-schema.js";
 
 const Category = model("categories", CategorySchema);
 

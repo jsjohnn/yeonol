@@ -1,8 +1,8 @@
 import { Router } from "express";
 import is from "@sindresorhus/is";
 // 폴더에서 import하면, 자동으로 폴더의 index.js에서 가져옴
-import { adminRequired, loginRequired, errorHandler } from "../middlewares";
-import { orderService } from "../services";
+import { adminRequired, loginRequired, errorHandler } from "../middlewares/index.js";
+import { orderService } from "../services/index.js";
 
 const orderRouter = Router();
 
@@ -169,8 +169,8 @@ orderRouter.delete("/order/:orderId", async function (req, res, next) {
 // 주문 확정 메일 발신
 orderRouter.post("/sendMail/:orderId", async function (req, res, next) {
   try {
-    const  sendedMail = await orderService.sendMail(req.params.orderId);
-    
+    const sendedMail = await orderService.sendMail(req.params.orderId);
+
     res.status(200).json(sendedMail);
   } catch (error) {
     next(error);

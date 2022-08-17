@@ -1,4 +1,4 @@
-import { orderModel } from "../db";
+import { orderModel } from "../db/index.js";
 import nodemailer from "nodemailer";
 
 class OrderService {

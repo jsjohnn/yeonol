@@ -1,5 +1,5 @@
-import { categoryModel } from "../db";
-import { subCategoryModel } from "../db";
+import { categoryModel } from "../db/index.js";
+import { subCategoryModel } from "../db/index.js";
 
 class SubCategoryService {
   constructor(categoryModel, subCategoryModel) {

@@ -1,4 +1,4 @@
-import { userModel } from "../db";
+import { userModel } from "../db/index.js";
 
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
@@ -175,7 +175,7 @@ class UserService {
     return user;
   }
 
-  
+
   // 유저 삭제
   async DeleteUser(userId, userPassword, inputPassword) {
     // 객체 destructuring

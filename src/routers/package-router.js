@@ -1,9 +1,10 @@
 import { Router } from "express";
 import is from "@sindresorhus/is";
 // 폴더에서 import하면, 자동으로 폴더의 index.js에서 가져옴
-import { loginRequired } from "../middlewares";
-import { packageService } from "../services";
-const multer = require("multer");
+import { loginRequired } from "../middlewares/index.js";
+import { packageService } from "../services/index.js";
+import multer from "multer";
+// const multer = require("multer");
 
 const packageRouter = Router();
 const DIR = "src/db/image/";

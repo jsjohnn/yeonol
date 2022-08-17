@@ -1,7 +1,6 @@
-import { model } from "mongoose";
-const mongoose = require("mongoose");
-import { OrderSchema } from "../schemas/order-schema";
-import { PackageSchema } from "../schemas/package-schema";
+import pkg from 'mongoose';
+const { model } = pkg;
+import { OrderSchema } from "../schemas/order-schema.js";
 
 const Order = model("order", OrderSchema);
 

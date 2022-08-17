@@ -1,4 +1,4 @@
-import { packageModel } from "../db";
+import { packageModel } from "../db/index.js";
 
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";

@@ -1,5 +1,7 @@
 import express from "express";
-import path from "path";
+import path from 'path';
+const __dirname = path.resolve();
+// const __dirname = `C:\Users\johnj\Desktop\SHOPPING-MALL\src\routers`;
 
 const viewsRouter = express.Router();
 
@@ -36,9 +38,13 @@ viewsRouter.use("/", serveStatic(""));
 // views폴더 내의 ${resource} 폴더 내의 모든 파일을 웹에 띄우며,
 // 이 때 ${resource}.html 을 기본 파일로 설정함.
 function serveStatic(resource) {
-  const resourcePath = path.join(__dirname, `../views/${resource}`);
+  const resourcePath = path.join(__dirname, `src/views/${resource}`);
   // ../views/product/detail
   let option = { index: `${resource}.html` };
+
+  console.log(__dirname);
+  console.log(resourcePath);
+  console.log(option);
 
   // /product/detail라는 경로를 쓰기위함. detail.html으로 출력
   if (resource.includes("/") ? true : false) {
@@ -47,6 +53,8 @@ function serveStatic(resource) {
   }
 
   // express.static 은 express 가 기본으로 제공하는 함수임
+  console.log(express.static(resourcePath, option));
+
   return express.static(resourcePath, option);
 }
 

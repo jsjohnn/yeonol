@@ -1,6 +1,6 @@
-import { model } from "mongoose";
-const mongoose = require("mongoose");
-import { PackageSchema } from "../schemas/package-schema";
+import pkg from 'mongoose';
+const { model } = pkg;
+import { PackageSchema } from "../schemas/package-schema.js";
 // import { ObjectId } from 'mongoose';
 // import { ObjectId } from '..db';
 
