@@ -1,0 +1,59 @@
+[
+  {
+    "index": 1,
+    "name": "서울",
+    "name_en": "Seoul",
+    "category": "국내",
+    "description": "자랑스러운 서울로 떠나보세요!",
+    "image": "http://t1.daumcdn.net/brunch/service/user/bra/image/aJ93GlCnzd_nPtfeK8yaEaYF7hU.jpg"
+  },
+
+  {
+    "index": 2,
+    "name": "방콕",
+    "name_en": "Bangkok",
+    "category": "아시아",
+    "description": "낭만의 도시 방콕을 즐겨보세요!",
+    "image": "http://t1.daumcdn.net/brunch/service/user/oeE/image/iJ0QcJNYu9ndZ86tDH1tPRhbOQY"
+  },
+  {
+    "index": 3,
+    "name": "로마",
+    "name_en": "Rome",
+    "category": "유럽",
+    "description": "살아있는 역사를 만끽해보세요!",
+    "image": "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=http%3A%2F%2Fcfile27.uf.tistory.com%2Fimage%2F2633DA4B5506DB4C0CEA43"
+  },
+  {
+    "index": 4,
+    "name": "런던",
+    "name_en": "London",
+    "category": "유럽",
+    "description": "런던으로 떠나보세요!",
+    "image": "https://cdn.jbsori.com/news/photo/202012/2516_4208_299.jpg"
+  },
+  {
+    "index": 5,
+    "name": "베이징",
+    "name_en": "Beijing",
+    "category": "중국",
+    "description": "베이징으로 떠나보세요!",
+    "image": "https://www.sebang.ca/files/attach/images/231/633/358de647876fa2eab4f5894735a9b9ee.png"
+  },
+  {
+    "index": 6,
+    "name": "파리",
+    "name_en": "Paris",
+    "category": "유럽",
+    "description": "파리로 떠나보세요!",
+    "image": "https://file.mk.co.kr/mkde/N0/2021/07/20210701_4899822_1625200068.jpg"
+  },
+  {
+    "index": 7,
+    "name": "도쿄",
+    "name_en": "Tokyo",
+    "category": "일본",
+    "description": "도쿄로 떠나보세요!",
+    "image": "https://d2ahiw9kb7is19.cloudfront.net/-/media/17F7FA64B6BE41AAA783C6EFA829A529.jpg?d=20171117T090727&w=750"
+  }
+]

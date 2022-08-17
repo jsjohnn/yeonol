@@ -1,0 +1,68 @@
+.div-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.landing {
+  cursor: pointer;
+  border: 1px solid red;
+  padding: 10px;
+}
+
+.greeting {
+  cursor: pointer;
+  border: 1px solid blue;
+  padding: 10px;
+  margin-left: 3rem;
+}
+
+.item-scroll-list {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  margin: 0px 8px;
+}
+
+#left-scroll-list-move-icon {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  height: 330px;
+  left: 0px;
+  z-index: 1;
+}
+
+#left-arrow:hover {
+  color: black;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+#right-scroll-list-move-icon {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  height: 330px;
+  right: 0px;
+  z-index: 1;
+}
+
+#right-arrow:hover {
+  color: black;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.item-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 12px;
+  padding-bottom: 16px;
+  grid-auto-rows: 1fr;
+}
+
+.dropdown {
+  float: right;
+}

@@ -1,0 +1,30 @@
+#tourDes {
+  margin-bottom: 120px;
+}
+
+#textArea #howPerson {
+  font-size: 1.2rem;
+  display: inline-block;
+}
+
+#textArea #howPersonInput {
+  display: inline-block;
+  width: 30vw;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+#btnArea #btnBox {
+  display: flex;
+  width: 100%;
+}
+#btnArea #cartAddBtn {
+  width: 45%;
+  height: 50px;
+  margin-right: 10%;
+}
+
+#btnArea #orderBtn {
+  width: 45%;
+  height: 50px;
+}
