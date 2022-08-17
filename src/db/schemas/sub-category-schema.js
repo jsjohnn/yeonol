@@ -1,14 +1,14 @@
 import { Schema } from "mongoose";
 import mongoose from "mongoose";
-import autoIncrement from "mongoose-auto-increment";
-autoIncrement.initialize(mongoose.connection);
+// import autoIncrement from "mongoose-auto-increment";
+// autoIncrement.initialize(mongoose.connection);
 
 const SubCategorySchema = new Schema(
   {
-    categoryId: {
-      type: Number,
-      required: true,
-    },
+    // categoryId: {
+    //   type: Number,
+    //   required: true,
+    // },
     subCategoryId: {
       type: Number,
       default: 0,
@@ -25,11 +25,11 @@ const SubCategorySchema = new Schema(
   }
 );
 
-SubCategorySchema.plugin(autoIncrement.plugin, {
-  model: "SubCategory",
-  field: "subCategoryId",
-  startAt: 1, //시작
-  increment: 1, // 증가
-});
+// SubCategorySchema.plugin(autoIncrement.plugin, {
+//   model: "SubCategory",
+//   field: "subCategoryId",
+//   startAt: 1, //시작
+//   increment: 1, // 증가
+// });
 
 export { SubCategorySchema };
