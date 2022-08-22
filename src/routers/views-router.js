@@ -16,6 +16,7 @@ viewsRouter.use("/list", serveStatic("list"));
 viewsRouter.use("/account", serveStatic("account"));
 viewsRouter.use("/account/orders", serveStatic("account/orders"));
 viewsRouter.use("/account/deleteAccount", serveStatic("account/deleteAccount"));
+viewsRouter.use("/account/adminCategoryManage", serveStatic("account/adminCategoryManage"));
 viewsRouter.use("/account/sell", serveStatic("account/sell"));
 viewsRouter.use("/account/userUpdate", serveStatic("account/userUpdate"));
 viewsRouter.use("/account/adminUpdate", serveStatic("account/adminUpdate"));
