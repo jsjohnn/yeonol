@@ -1,4 +1,4 @@
-import pkg from 'mongoose';
+import pkg from "mongoose";
 const { model } = pkg;
 import { SubCategorySchema } from "../schemas/sub-category-schema.js";
 
@@ -25,8 +25,10 @@ export class SubCategoryModel {
     return subCategory;
   }
 
-  async findBySubCategoryName(subCategoryName) {  
-    const subCategory = await SubCategory.findOne({ subCategoryName:  subCategoryName});
+  async findBySubCategoryName(subCategoryName) {
+    const subCategory = await SubCategory.findOne({
+      subCategoryName: subCategoryName,
+    });
 
     return subCategory;
   }
@@ -61,6 +63,11 @@ export class SubCategoryModel {
     });
 
     return deletedSubCategory;
+  }
+
+  async findAllSubCategoryByCategoryId(categoryId) {
+    const allCategory = await SubCategory.find({ categoryId: categoryId });
+    return allCategory;
   }
 }
 

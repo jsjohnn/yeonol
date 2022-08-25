@@ -1,7 +1,7 @@
-import { Router } from 'express';
-import is from '@sindresorhus/is';
-import { adminRequired, errorHandler } from '../middlewares/index.js';
-import { subCategoryService } from '../services/index.js';
+import { Router } from "express";
+import is from "@sindresorhus/is";
+import { adminRequired, errorHandler } from "../middlewares/index.js";
+import { subCategoryService } from "../services/index.js";
 
 const subCategoryRouter = Router();
 
@@ -24,11 +24,13 @@ subCategoryRouter.post(
         subCategoryName
       );
 
-    res.status(201).json(newCategory);
-  } catch (error) {
-    next(error);
-  }
-}, errorHandler);
+      res.status(201).json(newCategory);
+    } catch (error) {
+      next(error);
+    }
+  },
+  errorHandler
+);
 
 subCategoryRouter.patch(
   "/subcategory",
@@ -49,13 +51,12 @@ subCategoryRouter.patch(
         curSubCategoryName.replace(/"/g, ""),
         updatedSubCategoryName.replace(/"/g, "")
       );
-
-
-  } catch (error){
-    next(error);
-  }
-
-}, errorHandler);
+    } catch (error) {
+      next(error);
+    }
+  },
+  errorHandler
+);
 
 // subcategory delete router
 subCategoryRouter.delete(
@@ -77,7 +78,25 @@ subCategoryRouter.delete(
     } catch (error) {
       next(error);
     }
-  }, errorHandler
+  },
+  errorHandler
+);
+
+subCategoryRouter.get(
+  "/subcategory/:categoryId",
+  async (req, res, next) => {
+    try {
+      const categoryId = req.params.categoryId;
+      const allCategory = await subCategoryService.getAllPureCategory(
+        categoryId
+      );
+
+      res.status(201).json(allCategory);
+    } catch (error) {
+      next(error);
+    }
+  },
+  errorHandler
 );
 
 export { subCategoryRouter };

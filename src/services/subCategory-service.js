@@ -78,6 +78,14 @@ class SubCategoryService {
 
     return deletedSubCategory;
   }
+
+  async getAllPureCategory(categoryId) {
+    const allCategory =
+      await this.subCategoryModel.findAllSubCategoryByCategoryId({
+        categoryId,
+      });
+    return allCategory;
+  }
 }
 
 const subCategoryService = new SubCategoryService(
