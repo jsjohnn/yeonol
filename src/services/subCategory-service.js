@@ -81,9 +81,7 @@ class SubCategoryService {
 
   async getAllPureCategory(categoryId) {
     const allCategory =
-      await this.subCategoryModel.findAllSubCategoryByCategoryId({
-        categoryId,
-      });
+      await this.subCategoryModel.findByCategoryIdAll(categoryId);
     return allCategory;
   }
 }

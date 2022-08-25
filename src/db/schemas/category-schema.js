@@ -6,11 +6,10 @@ const { Schema } = pkg;
 
 const CategorySchema = new Schema(
   {
-    // categoryId는 auto increment로 작성
-    // categoryId: {
-    //   type: Number,
-    //   default: 0,
-    // },
+    categoryId: {
+      type: Number,
+      default: 0,
+    },
     categoryName: {
       type: String,
       required: true,

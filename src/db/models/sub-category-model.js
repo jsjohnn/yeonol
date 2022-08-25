@@ -20,7 +20,7 @@ export class SubCategoryModel {
   }
 
   async findByCategoryIdAll(categoryId) {
-    const subCategory = await SubCategory.find({ categoryId });
+    const subCategory = await SubCategory.find({categoryId},{"subCategoryName":true,"_id":false});
 
     return subCategory;
   }
@@ -65,10 +65,6 @@ export class SubCategoryModel {
     return deletedSubCategory;
   }
 
-  async findAllSubCategoryByCategoryId(categoryId) {
-    const allCategory = await SubCategory.find({ categoryId: categoryId });
-    return allCategory;
-  }
 }
 
 const subCategoryModel = new SubCategoryModel();

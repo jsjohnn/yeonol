@@ -5,10 +5,10 @@ const { Schema } = pkg;
 
 const SubCategorySchema = new Schema(
   {
-    // categoryId: {
-    //   type: Number,
-    //   required: true,
-    // },
+    categoryId: {
+      type: Number,
+      required: true,
+    },
     subCategoryId: {
       type: Number,
       default: 0,
