@@ -36,7 +36,7 @@
 
     <!-- 커스텀 css, js -->
     <link rel="stylesheet" href="adminCategoryManage.css" />
-    <script src="adminCategoryManage.js" type="module" defer></script>
+    <script src="adminCategoryManage.js" type="module" charset="utf-8" defer></script>
     <script
       src="../../components/loginNavbar/loginNav.js"
       type="module"
@@ -76,33 +76,44 @@
 
     <!-- 제품 추가 폼(Form) -->
     <section class="section">
-      <div class="container" id="container">
-        <!-- <div class="accordion">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#panelsStayOpen-collapseOne"
-                aria-expanded="true"
-                aria-controls="panelsStayOpen-collapseOne"
-              >
-                Accordion Item #1
-              </button>
-            </h2>
-            <div
-              id="panelsStayOpen-collapseOne"
-              class="accordion-collapse collapse"
-            >
-              <div class="accordion-body">
-                카테고리 이름 <button style="float: right">삭제</button
-                ><button style="float: right">수정</button>
-              </div>
-            </div>
-          </div>
-        </div> -->
-      </div>
+      <div class="container" id="container"></div>
     </section>
+
+    <div class="modal" tabindex="-1" id="exampleModal" style="z-index: 1100">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">서브카테고리 수정</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <p id="subcategoryName" style="display: inline">
+                수정할 서브 카테고리 이름
+              </p>
+              <p style="display: inline">-></p>
+              <input type="text" id="modalInput" />
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              취소
+            </button>
+            <button type="button" class="btn btn-primary" id="saveChangeBtn">
+              수정하기
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

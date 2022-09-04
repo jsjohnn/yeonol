@@ -51,6 +51,7 @@ subCategoryRouter.patch(
         curSubCategoryName.replace(/"/g, ""),
         updatedSubCategoryName.replace(/"/g, "")
       );
+      res.status(200).json(changedSubCategory);
     } catch (error) {
       next(error);
     }

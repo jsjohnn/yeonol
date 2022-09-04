@@ -1,4 +1,4 @@
-import pkg from 'mongoose';
+import pkg from "mongoose";
 const { Schema } = pkg;
 // import autoIncrement from "mongoose-auto-increment";
 // autoIncrement.initialize(mongoose.connection);
@@ -17,12 +17,12 @@ const SubCategorySchema = new Schema(
       type: String,
       required: true,
     },
-  },
-  {
-    collection: "subcategories",
-    versionKey: false,
-    timestamps: true,
   }
+  // {
+  //   collection: "subcategories",
+  //   versionKey: false,
+  //   timestamps: true,
+  // }
 );
 
 // SubCategorySchema.plugin(autoIncrement.plugin, {
