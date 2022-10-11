@@ -32,5 +32,5 @@
 <br>
 
 ## 3. 폴더 구조
-- 프론트: `src/views` 폴더
 - 백: `src/views` 이외 폴더 전체
+- 프론트: `src/views` 폴더
