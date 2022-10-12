@@ -20,24 +20,30 @@
 
 ## 2. 시연 영상
 ### 메인 페이지
+- 카테고리 (대륙 또는 국가) 별로 패키지 상품을 나눔
+- 검색기능
+
 <img src="https://user-images.githubusercontent.com/63035520/195245053-69188e40-ba7e-42d9-a11e-f8e85136192e.gif"  width="600" height="300"/>
 
 <br />
 
 ### 회원가입
-- 데이터 유효성 검증 
+- 데이터 유효성 검증
+
 <img src="https://user-images.githubusercontent.com/63035520/195245254-7f734068-2125-43aa-97fa-1a82d01a1364.gif" width="600" height="300"/>
 
 <br />
 
 ### 로그인
+- 데이터 유효성 검증
+- 로그인에 성공하면 세션스토리지에 토큰을 저장
 
 <img src="https://user-images.githubusercontent.com/63035520/195246998-3b966fba-30bd-44f1-9256-8c57b1d6e2f5.gif" width="600" height="300" />
 
 <br />
 
 ### 회원 정보 수정
-
+- 이름과 비밀번호를 수정 가능
 <img src="https://user-images.githubusercontent.com/63035520/195247385-75ed82ad-1bcc-4a4a-9997-3fb5bd7de4f4.gif" width="600" height="300" />
 
 <br />
@@ -50,7 +56,9 @@
 <br />
 
 ### 상품 추가
-
+- 관리자 계정으로 로그인 -> 판매하고 싶은 상품 추가
+- 이미지는 multer를 이용, 로컬스토리지에 저장
+  - 추후 S3 서버에 저장하도록 리팩토링 예정
 <img src="https://user-images.githubusercontent.com/63035520/195248677-7b829532-249d-469e-9144-100a02d4658e.gif" width="600" height="300" />
 
 <br />
@@ -62,7 +70,7 @@
 <br />
 
 ### 장바구니
-
+- 장바구니 CRUD 가능
 <img src="https://user-images.githubusercontent.com/63035520/195249219-20134998-da10-492c-89a0-1ce9a929d385.gif" width="600" height="300" />
 
 <br />
@@ -73,7 +81,8 @@
 
 <br />
 
-### 주문 조회 및 메일 확인
+### 예약 조회 및 메일 확인
+- 예약 완료후 조회
 - nodemailer를 활용, 예약 확인 메일 발송
 <img src="https://user-images.githubusercontent.com/63035520/195249448-76876d81-9cab-44df-a4af-dfea803e3233.gif" width="600" height="300" />
 
