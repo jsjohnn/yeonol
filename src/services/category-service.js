@@ -20,9 +20,9 @@ class CategoryService {
     let categories = [];
 
     for (let i = 0; i < allCategory.length; ++i) {
-      categoryIds.push(allCategory[i].categoryId);
+      categoryIds.push(allCategory[i]._id);
     }
-    
+
     // 메인 카테고리 수 만큼 배열을 순회
     for (let i = 0; i < categoryIds.length; ++i) {
       let subCategoryNames = [];
@@ -47,7 +47,7 @@ class CategoryService {
   async getAllCategory() {
     const allCategory = await this.categoryModel.findAll({});
     const categories = await this.parseAllCategory(allCategory);
-    
+
     return categories;
   }
 }

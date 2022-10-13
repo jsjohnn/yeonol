@@ -1,17 +1,15 @@
 import pkg from 'mongoose';
 const { Schema } = pkg;
-// import autoIncrement from "mongoose-auto-increment";
-// autoIncrement.initialize(mongoose.connection);
 
 const SubCategorySchema = new Schema(
   {
-    // categoryId: {
+    // subCategoryId: {
     //   type: Number,
-    //   required: true,
+    //   default: 0,
     // },
-    subCategoryId: {
-      type: Number,
-      default: 0,
+    categoryId: {
+      type: String,
+      required: true,
     },
     subCategoryName: {
       type: String,
@@ -24,12 +22,5 @@ const SubCategorySchema = new Schema(
     timestamps: true,
   }
 );
-
-// SubCategorySchema.plugin(autoIncrement.plugin, {
-//   model: "SubCategory",
-//   field: "subCategoryId",
-//   startAt: 1, //시작
-//   increment: 1, // 증가
-// });
 
 export { SubCategorySchema };

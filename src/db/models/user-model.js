@@ -1,7 +1,7 @@
 import pkg from 'mongoose';
-const { model } = pkg;
 import { UserSchema } from "../schemas/user-schema.js";
 
+const { model } = pkg;
 const User = model("users", UserSchema);
 
 export class UserModel {

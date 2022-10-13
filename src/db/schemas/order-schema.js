@@ -57,6 +57,4 @@ const OrderSchema = new Schema({
   },
 });
 
-// mongoose.model("PackageSchema");
-
 export { OrderSchema };

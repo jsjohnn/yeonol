@@ -1,6 +1,7 @@
 import pkg from 'mongoose';
-const { model } = pkg;
 import { SubCategorySchema } from "../schemas/sub-category-schema.js";
+
+const { model } = pkg;
 
 const SubCategory = model("subcategories", SubCategorySchema);
 
@@ -15,31 +16,27 @@ export class SubCategoryModel {
 
   async findByCategoryId(categoryId) {
     const subCategory = await SubCategory.findOne({ categoryId });
-
     return subCategory;
   }
 
   async findByCategoryIdAll(categoryId) {
-    const subCategory = await SubCategory.find({ categoryId });
-
+    const subCategory = await SubCategory.find({ categoryId: categoryId });
     return subCategory;
   }
 
-  async findBySubCategoryName(subCategoryName) {  
-    const subCategory = await SubCategory.findOne({ subCategoryName:  subCategoryName});
-
+  async findBySubCategoryName(subCategoryName) {
+    const subCategory = await SubCategory.findOne({ subCategoryName: subCategoryName });
     return subCategory;
   }
 
   async findAll() {
     const subCategories = await SubCategory.find({});
-
     return subCategories;
   }
 
   async create(categoryId, subCategoryName) {
     const createdNewSubCategory = await SubCategory.create({
-      categoryId,
+      categoryId: categoryId,
       subCategoryName,
     });
 
@@ -57,7 +54,7 @@ export class SubCategoryModel {
 
   async delete(subCategoryId) {
     const deletedSubCategory = await SubCategory.findOneAndDelete({
-      subCategoryId: subCategoryId,
+      _id: subCategoryId,
     });
 
     return deletedSubCategory;

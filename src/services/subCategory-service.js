@@ -18,9 +18,7 @@ class SubCategoryService {
       subCategoryName
     );
     const subcategoryName = subCategoryName;
-    const categoryid = category.categoryId;
-
-    console.log(subCategory);
+    const categoryid = category._id;
 
     if (subCategory) {
       throw new Error(
@@ -46,7 +44,7 @@ class SubCategoryService {
       );
     }
 
-    const filter = { subCategoryId: subCategory.subCategoryId };
+    const filter = { _id: subCategory._id };
     const update = { subCategoryName: updatedSubCategoryName };
 
     let updatedSubCategory = await this.subCategoryModel.updateSubCategoryName(
@@ -73,7 +71,7 @@ class SubCategoryService {
     }
 
     const deletedSubCategory = await this.subCategoryModel.delete(
-      subCategory.subCategoryId
+      subCategory._id
     );
 
     return deletedSubCategory;

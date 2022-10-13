@@ -57,7 +57,6 @@ subCategoryRouter.patch(
 
 }, errorHandler);
 
-// subcategory delete router
 subCategoryRouter.delete(
   "/subcategory",
   adminRequired,
