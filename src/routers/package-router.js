@@ -2,34 +2,29 @@ import { Router } from "express";
 import is from "@sindresorhus/is";
 import { packageService } from "../services/index.js";
 import multer from "multer";
+import multerS3 from "multer-s3";
+import aws from "aws-sdk";
 
 const packageRouter = Router();
-const DIR = "src/db/image/";
 
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, DIR);
-  }, //file 을 받아와서 DIR 경로에 저장한다.
-  filename: (req, file, cb) => {
-    cb(null, file.originalname);
+const s3 = new aws.S3({
+  credentials: {
+    accessKeyId: process.env.ACCESS_KEY_ID,
+    secretAccessKey: process.env.SECRET_ACCESS_KEY,
   },
+  region: process.env.REGION,
 });
 
-let upload = multer({
-  storage: storage,
-  fileFilter: (req, file, cb) => {
-    // 말 그대로 fileFilter
-    if (
-      file.mimetype == "image/png" ||
-      file.mimetype == "image/jpg" ||
-      file.mimetype == "image/jpeg"
-    ) {
-      cb(null, true);
-    } else {
-      cb(null, false);
-      return cb(new Error("Only .png .jpg and .jpeg format allowed!"));
-    }
-  },
+const upload = multer({
+  storage: multerS3({
+    s3: s3,
+    bucket: 'john-firstawsbucket',
+    acl: 'public-read-write',
+    contentType: multerS3.AUTO_CONTENT_TYPE,
+    key: function (req, file, cb) {
+      cb(null, `${Date.now()}_${file.originalname}`);
+    },
+  }),
 });
 
 packageRouter.post(
@@ -42,8 +37,6 @@ packageRouter.post(
           "headers의 Content-Type을 application/json으로 설정해주세요"
         );
       }
-      console.log(req.body);
-      const url = "http://localhost:5000";
       const packageName = req.body.packageName;
       const category = req.body.category;
       const country = req.body.country;
@@ -52,7 +45,8 @@ packageRouter.post(
       const departureAt = req.body.departureAt;
       const arrivalAt = req.body.arrivalAt;
       const totalNumber = req.body.totalNumber;
-      const imgUrl = url + "/db/image/" + req.file.filename;
+      // const imgUrl = req.body.imgUrl;
+      const imgUrl = req.file.location;
       const substance = req.body.substance;
 
       // 위 데이터를 유저 db에 추가하기
@@ -115,7 +109,8 @@ packageRouter.patch("/packages/:packageId", async function (req, res, next) {
     const departureAt = req.body.departureAt;
     const arrivalAt = req.body.arrivalAt;
     const totalNumber = req.body.totalNumber;
-    const imgUrl = req.body.imgUrl;
+    // const imgUrl = req.body.imgUrl;
+    const imgUrl = req.file.location;
     const substance = req.body.substance;
 
     // 위 데이터가 undefined가 아니라면, 즉, 프론트에서 업데이트를 위해
