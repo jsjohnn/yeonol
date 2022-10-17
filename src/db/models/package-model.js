@@ -20,6 +20,7 @@ export class PackageModel {
     const packages = await Package.find({});
     return packages;
   }
+  
   async findById(packageId) {
     const findpackage = await Package.findOne({ _id: packageId });
     return findpackage;
