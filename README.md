@@ -93,6 +93,7 @@
 ### 백엔드
 - **Express.js - Node.js**
 - Mongodb, Mongoose
+- AWS-S3
 - 이외
 
 ### 프론트엔드
