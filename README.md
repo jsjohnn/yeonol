@@ -90,17 +90,20 @@
 
 ## 3. 주요 사용 기술
 ### 백엔드
-- **Express.js - Node.js**
-- Mongodb, Mongoose
-- AWS-S3
-- 이외
+<div>
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white">
+  <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=Express.js&logoColor=white">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white">
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=MongoDB&logoColor=white">
+  <img src="https://img.shields.io/badge/Amazon S3-569A31?style=for-the-badge&logo=Amazon S3&logoColor=white">
+</div>
 
 ### 프론트엔드
-- **Vanilla javascript**, html, css (**Bulma css**)
-- BootStrap
-- 이외
-
-<br />
+<div>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white">
+  <img src="https://img.shields.io/badge/Bulma CSS-00D1B2?style=for-the-badge&logo=Bulma CSS&logoColor=white">
+  <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=Bootstrap&logoColor=white">
+</div>
 
 ## 4. 폴더 구조
 - 백: `src/views` 이외 폴더 전체
